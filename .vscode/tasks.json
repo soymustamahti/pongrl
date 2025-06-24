@@ -1,0 +1,73 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Train DQN Agent (Improved)",
+      "type": "shell",
+      "command": "./venv/bin/python",
+      "args": [
+        "run.py",
+        "--episodes",
+        "2000",
+        "--device",
+        "auto",
+        "--seed",
+        "42"
+      ],
+      "group": "build",
+      "isBackground": false,
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Train DQN Agent (Quick Test)",
+      "type": "shell",
+      "command": "./venv/bin/python",
+      "args": ["run.py", "--quick"],
+      "group": "build",
+      "isBackground": false,
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Evaluate with Recording",
+      "type": "shell",
+      "command": "./venv/bin/python",
+      "args": ["run.py", "--mode", "eval", "--render", "--record"],
+      "group": "test",
+      "isBackground": false,
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Install Dependencies",
+      "type": "shell",
+      "command": "./venv/bin/python",
+      "args": ["-m", "pip", "install", "-r", "requirements.txt"],
+      "group": "build",
+      "isBackground": false,
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "new"
+      }
+    }
+  ]
+}
